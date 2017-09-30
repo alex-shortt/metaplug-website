@@ -1,0 +1,14 @@
+body {
+  margin: 0 !important; }
+
+.main-container {
+  background: linear-gradient(0deg, #db0730, #6348ed);
+  height: 100vh; }
+
+.circle {
+  text-align: center; }
+
+.circle-row {
+  margin: 0px 5vw; }
+
+/*# sourceMappingURL=main.css.map */
