@@ -89,3 +89,6 @@ function updateTime(circleOptions) {
     }
 }
 
+function initModal() {
+    $('#signup-modal').modal();
+}

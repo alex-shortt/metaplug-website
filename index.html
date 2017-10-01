@@ -9,11 +9,31 @@
     <link rel="stylesheet" href="css/main.css" type="text/css">
 
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="scripts/jquery.circliful.min.js"></script>
     <script src="scripts/main.js" type="text/javascript"></script>
 </head>
 
 <body>
+    <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-container">
+            <h1 class="modal-close">X</h1>
+            <div class="row modal-row">
+                <form>
+                    <label class="modal-form-label">
+                    <input class="modal-form-input" type="text" required />
+                    <div class="modal-form-label-text">NAME/ORGANIZATION</div>
+                    </label>
+                    <label class="modal-form-label">
+                        <input class="modal-form-input" type="text" required />
+                        <div class="modal-form-label-text">EMAIL</div>
+                    </label>
+                </form>
+            </div>
+            <button class="modal-form-button">SIGN UP</button>
+        </div>
+    </div>
+
     <div class="container-fluid main-container">
         <div class="row title-row">
             <div class="title col">
@@ -37,26 +57,14 @@
                     <line class="signup-svg-line" x1="0" y1="50%" x2="30%" y2="50%"></line>
                     <line class="signup-svg-line" x1="70%" y1="50%" x2="100%" y2="50%"></line>
                 </svg>
-                <h2 class="signup-text open-modal" data-modal="#modal-signup">SIGN UP</h2>
+                <h2 class="signup-text" data-toggle="modal" data-target="#signup-modal">SIGN UP</h2>
             </div>
         </div>
     </div>
-
-    <div class="overlay">
-        <div class='modal' id='modal-signup'>
-            <div class='content'>
-                <h1 class='title'>This is a modal</h1>
-                <p>
-                    Here is some text and stuff. cool cool
-                </p>
-                <a class='btn close-modal' data-modal="#modal-signup" href="#">K Bye</a>
-            </div>
-        </div>
-    </div>
-
     <script>
         $(document).ready(function() {
             initCircles();
+            initModal();
         });
 
     </script>

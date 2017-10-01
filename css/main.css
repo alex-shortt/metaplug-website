@@ -69,4 +69,86 @@ body {
   cursor: pointer;
   padding: 40px; }
 
+.modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 55vh;
+  width: 70vw;
+  background: white; }
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  font-family: Metropolis;
+  color: #6348ed; }
+.modal-row {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+.modal-form-label {
+  display: block;
+  letter-spacing: 4px;
+  padding-top: 30px;
+  text-align: center; }
+  .modal-form-label-text {
+    color: black;
+    cursor: text;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    transform: translateY(-34px);
+    transition: all 0.3s; }
+.modal-form-input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid black;
+  color: black;
+  font-size: 36px;
+  letter-spacing: -1px;
+  outline: 0;
+  padding: 5px 20px;
+  text-align: center;
+  transition: all 0.3s;
+  width: 75%; }
+  .modal-form-input:focus {
+    max-width: 100%;
+    width: 100%; }
+    .modal-form-input:focus + .modal-form-label-text {
+      color: #b7b7b7;
+      font-size: 13px;
+      transform: translateY(-74px); }
+  .modal-form-input:valid + .modal-form-label-text {
+    font-size: 13px;
+    transform: translateY(-74px); }
+.modal-form-button {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  background: #da0530;
+  border: none;
+  transform: translateY(40%);
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 25px 45px;
+  text-transform: uppercase;
+  transition: all 200ms; }
+  .modal-form-button:hover, .modal-form-button:focus {
+    background-color: white;
+    color: #da0530;
+    outline: 0; }
+
+.in {
+  opacity: 1; }
+
+.modal-backdrop.fade {
+  opacity: .75; }
+
 /*# sourceMappingURL=main.css.map */
