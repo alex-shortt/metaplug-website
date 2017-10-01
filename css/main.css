@@ -15,7 +15,7 @@ body {
 
 .main-container {
   background: linear-gradient(0deg, #db0730, #6348ed);
-  height: 100vh;
+  height: 100%;
   padding: 15px; }
 
 .title {
@@ -236,6 +236,9 @@ body {
 @media screen and (max-width: 480px) {
   .svg-container {
     transform: scale(1.3); } }
+
+html, body {
+  height: 100%; }
 
 /*
 breakpoints
