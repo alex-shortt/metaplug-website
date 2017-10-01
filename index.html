@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link href="css/jquery.circliful.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/main.scss" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
 
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="scripts/jquery.circliful.min.js"></script>
@@ -15,11 +15,42 @@
 
 <body>
     <div class="container-fluid main-container">
+        <div class="row title-row">
+            <div class="title col">
+                <h1 class="title-text"><span class="title-text-bold">META</span>PLUG</h1>
+                <h5 class="title-subtitle">Connecting Businesses and Creatives</h5>
+            </div>
+        </div>
+        <div class="row coming-row">
+            <h2 class="coming-text">COMING SOON</h2>
+        </div>
         <div class="row circle-row">
             <div id="circle-days" class="col-lg-3 col-6 circle"></div>
             <div id="circle-hours" class="col-lg-3 col-6 circle"></div>
             <div id="circle-mins" class="col-lg-3 col-6 circle"></div>
             <div id="circle-secs" class="col-lg-3 col-6 circle"></div>
+        </div>
+        <div class="row signup-row">
+            <div class="col-lg-4 signup"></div>
+            <div class="col-lg-4 signup">
+                <svg class="signup-svg">
+                    <line class="signup-svg-line" x1="0" y1="50%" x2="30%" y2="50%"></line>
+                    <line class="signup-svg-line" x1="70%" y1="50%" x2="100%" y2="50%"></line>
+                </svg>
+                <h2 class="signup-text open-modal" data-modal="#modal-signup">SIGN UP</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div class='modal' id='modal-signup'>
+            <div class='content'>
+                <h1 class='title'>This is a modal</h1>
+                <p>
+                    Here is some text and stuff. cool cool
+                </p>
+                <a class='btn close-modal' data-modal="#modal-signup" href="#">K Bye</a>
+            </div>
         </div>
     </div>
 
