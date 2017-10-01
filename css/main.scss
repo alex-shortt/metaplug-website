@@ -93,6 +93,7 @@ body {
         transform: translateX(-50%) translateY(-50%);
         cursor: pointer;
         padding: 40px;
+        margin: 0;
     }
 }
 
@@ -110,9 +111,10 @@ body {
         position: absolute;
         top: 0;
         right: 0;
-        margin: 10px;
+        padding: 10px;
         font-family: Metropolis;
         color: #6348ed;
+        cursor: pointer;
     }
     &-row {
         margin: 0;
@@ -150,18 +152,48 @@ body {
             text-align: center;
             transition: all 0.3s;
             width: 75%;
+            font-family: "MetropolisLight";
             &:focus {
                 max-width: 100%;
                 width: 100%;
                 &+.modal-form-label-text {
-                    color: #b7b7b7;
+                    color: #878787;
                     font-size: 13px;
+                    font-family: "MetropolisThin";
                     transform: translateY(-74px);
                 }
             }
             &:valid+.modal-form-label-text {
                 font-size: 13px;
+                font-family: "MetropolisThin";
                 transform: translateY(-74px);
+            }
+        }
+        &-radio {
+            display: flex;
+            &-title {
+                color: black;
+                cursor: text;
+                line-height: 20px;
+                text-transform: uppercase;
+                transition: all 0.3s;
+                text-align: center;
+                margin-top: 25px;
+                font-size: 18px;
+                font-family: "MetropolisThin";
+            }
+            &-label {
+                flex: 1;
+            }
+            &-input {
+                display: none;
+                &:checked+.modal-form-radio-text {
+                    color: red;
+                }
+            }
+            &-text {
+                font-family: "Metropolis";
+                font-size: 22px;
             }
         }
         &-button {
@@ -178,10 +210,10 @@ body {
             padding: 25px 45px;
             text-transform: uppercase;
             transition: all 200ms;
+            font-family: "Metropolis";
             &:hover,
             &:focus {
-                background-color: white;
-                color: #da0530;
+                background-color: #a70627;
                 outline: 0;
             }
         }
@@ -195,3 +227,10 @@ body {
 .modal-backdrop.fade {
     opacity: .75;
 }
+
+
+/*
+breakpoints
+transform: scale(0.7);
+    transform-origin: top;
+*/

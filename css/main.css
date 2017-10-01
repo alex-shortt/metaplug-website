@@ -67,7 +67,8 @@ body {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   cursor: pointer;
-  padding: 40px; }
+  padding: 40px;
+  margin: 0; }
 
 .modal-container {
   position: absolute;
@@ -81,9 +82,10 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 10px;
+  padding: 10px;
   font-family: Metropolis;
-  color: #6348ed; }
+  color: #6348ed;
+  cursor: pointer; }
 .modal-row {
   margin: 0;
   height: 100%;
@@ -115,17 +117,41 @@ body {
   padding: 5px 20px;
   text-align: center;
   transition: all 0.3s;
-  width: 75%; }
+  width: 75%;
+  font-family: "MetropolisLight"; }
   .modal-form-input:focus {
     max-width: 100%;
     width: 100%; }
     .modal-form-input:focus + .modal-form-label-text {
-      color: #b7b7b7;
+      color: #878787;
       font-size: 13px;
+      font-family: "MetropolisThin";
       transform: translateY(-74px); }
   .modal-form-input:valid + .modal-form-label-text {
     font-size: 13px;
+    font-family: "MetropolisThin";
     transform: translateY(-74px); }
+.modal-form-radio {
+  display: flex; }
+  .modal-form-radio-title {
+    color: black;
+    cursor: text;
+    line-height: 20px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 18px;
+    font-family: "MetropolisThin"; }
+  .modal-form-radio-label {
+    flex: 1; }
+  .modal-form-radio-input {
+    display: none; }
+    .modal-form-radio-input:checked + .modal-form-radio-text {
+      color: red; }
+  .modal-form-radio-text {
+    font-family: "Metropolis";
+    font-size: 22px; }
 .modal-form-button {
   position: absolute;
   bottom: 0;
@@ -139,10 +165,10 @@ body {
   margin-top: 20px;
   padding: 25px 45px;
   text-transform: uppercase;
-  transition: all 200ms; }
+  transition: all 200ms;
+  font-family: "Metropolis"; }
   .modal-form-button:hover, .modal-form-button:focus {
-    background-color: white;
-    color: #da0530;
+    background-color: #a70627;
     outline: 0; }
 
 .in {
@@ -150,5 +176,11 @@ body {
 
 .modal-backdrop.fade {
   opacity: .75; }
+
+/*
+breakpoints
+transform: scale(0.7);
+    transform-origin: top;
+*/
 
 /*# sourceMappingURL=main.css.map */

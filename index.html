@@ -17,7 +17,7 @@
 <body>
     <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-container">
-            <h1 class="modal-close">X</h1>
+            <h1 class="modal-close" data-toggle="modal" data-target="#signup-modal">X</h1>
             <div class="row modal-row">
                 <form>
                     <label class="modal-form-label">
@@ -28,6 +28,17 @@
                         <input class="modal-form-input" type="text" required />
                         <div class="modal-form-label-text">EMAIL</div>
                     </label>
+                    <div class="modal-form-radio-title">ACCOUNT TYPE</div>
+                    <div class="modal-form-radio">
+                        <label class="modal-form-label modal-form-radio-label">
+                            <input class="modal-form-radio-input" name="type" type="radio" required />
+                            <div class="modal-form-radio-text">BUSINESS</div>
+                        </label>
+                        <label class="modal-form-label modal-form-radio-label">
+                            <input class="modal-form-radio-input" name="type" type="radio" required />
+                            <div class="modal-form-radio-text">CREATIVE</div>
+                        </label>
+                    </div>
                 </form>
             </div>
             <button class="modal-form-button">SIGN UP</button>
