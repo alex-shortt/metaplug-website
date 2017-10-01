@@ -35,7 +35,12 @@ body {
 .coming-text {
   color: white;
   font-family: "MetropolisThin";
-  letter-spacing: 20px; }
+  letter-spacing: 20px;
+  text-align: center; }
+  @media screen and (max-width: 550px) {
+    .coming-text {
+      font-size: 1.2rem;
+      letter-spacing: 13px; } }
 .coming-row {
   height: 10%;
   display: flex;
@@ -47,7 +52,20 @@ body {
   text-align: center; }
   .circle-row {
     margin: 0px 5vw;
-    height: 50%; }
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: top; }
+    @media screen and (max-width: 992px) {
+      .circle-row {
+        transform: scale(0.55); } }
+    @media screen and (max-width: 760px) {
+      .circle-row {
+        transform: scale(0.8); } }
+    @media screen and (max-width: 550px) {
+      .circle-row {
+        transform: scale(1.05); } }
 
 .signup-row {
   height: 20%; }
@@ -75,9 +93,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  height: 55vh;
-  width: 70vw;
+  min-width: 70vw;
   background: white; }
+  @media screen and (max-width: 550px) {
+    .modal-container {
+      height: 90vh;
+      min-width: 90vw; } }
 .modal-close {
   position: absolute;
   top: 0;
@@ -93,89 +114,128 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-.modal-form-label {
-  display: block;
-  letter-spacing: 4px;
-  padding-top: 30px;
-  text-align: center; }
-  .modal-form-label-text {
+.modal-form {
+  height: 90%;
+  display: flex;
+  margin: 10px 5px;
+  flex-direction: column; }
+  @media screen and (max-width: 550px) {
+    .modal-form {
+      height: 70%; } }
+  .modal-form-label {
+    flex: 1;
+    display: block;
+    letter-spacing: 4px;
+    padding-top: 30px;
+    text-align: center; }
+    .modal-form-label-text {
+      color: black;
+      cursor: text;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      transform: translateY(-34px);
+      transition: all 0.3s; }
+      @media screen and (max-width: 550px) {
+        .modal-form-label-text {
+          font-size: 15px;
+          line-height: 15px; } }
+  .modal-form-input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid black;
     color: black;
-    cursor: text;
-    font-size: 20px;
-    line-height: 20px;
-    text-transform: uppercase;
-    transform: translateY(-34px);
-    transition: all 0.3s; }
-.modal-form-input {
-  background-color: transparent;
-  border: 0;
-  border-bottom: 2px solid black;
-  color: black;
-  font-size: 36px;
-  letter-spacing: -1px;
-  outline: 0;
-  padding: 5px 20px;
-  text-align: center;
-  transition: all 0.3s;
-  width: 75%;
-  font-family: "MetropolisLight"; }
-  .modal-form-input:focus {
-    max-width: 100%;
-    width: 100%; }
-    .modal-form-input:focus + .modal-form-label-text {
-      color: #878787;
+    font-size: 36px;
+    letter-spacing: -1px;
+    outline: 0;
+    padding: 5px 20px;
+    text-align: center;
+    transition: all 0.3s;
+    width: 75%;
+    font-family: "MetropolisLight"; }
+    @media screen and (max-width: 550px) {
+      .modal-form-input {
+        font-size: 30px; } }
+    .modal-form-input:focus {
+      max-width: 100%;
+      width: 100%; }
+      .modal-form-input:focus + .modal-form-label-text {
+        color: #878787;
+        font-size: 13px;
+        font-family: "MetropolisThin";
+        transform: translateY(-74px); }
+    .modal-form-input:valid + .modal-form-label-text {
       font-size: 13px;
       font-family: "MetropolisThin";
       transform: translateY(-74px); }
-  .modal-form-input:valid + .modal-form-label-text {
-    font-size: 13px;
-    font-family: "MetropolisThin";
-    transform: translateY(-74px); }
-.modal-form-radio {
-  display: flex; }
-  .modal-form-radio-title {
-    color: black;
-    cursor: text;
-    line-height: 20px;
+  .modal-form-radio {
+    flex: 1;
+    display: flex;
+    padding-bottom: 30px; }
+    .modal-form-radio-title {
+      color: black;
+      cursor: text;
+      line-height: 20px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      text-align: center;
+      margin-top: 25px;
+      font-size: 18px;
+      font-family: "MetropolisThin"; }
+      @media screen and (max-width: 550px) {
+        .modal-form-radio-title {
+          font-size: 15px; } }
+    .modal-form-radio-label {
+      flex: 1; }
+    .modal-form-radio-input {
+      display: none; }
+      .modal-form-radio-input:checked + .modal-form-radio-text {
+        color: #da0530; }
+    .modal-form-radio-text {
+      font-family: "Metropolis";
+      font-size: 22px;
+      cursor: pointer; }
+      @media screen and (max-width: 550px) {
+        .modal-form-radio-text {
+          font-size: 18px; } }
+  .modal-form-button {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    background: #da0530;
+    border: none;
+    transform: translateY(40%);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 25px 45px;
     text-transform: uppercase;
-    transition: all 0.3s;
-    text-align: center;
-    margin-top: 25px;
-    font-size: 18px;
-    font-family: "MetropolisThin"; }
-  .modal-form-radio-label {
-    flex: 1; }
-  .modal-form-radio-input {
-    display: none; }
-    .modal-form-radio-input:checked + .modal-form-radio-text {
-      color: red; }
-  .modal-form-radio-text {
-    font-family: "Metropolis";
-    font-size: 22px; }
-.modal-form-button {
-  position: absolute;
-  bottom: 0;
-  right: 20px;
-  background: #da0530;
-  border: none;
-  transform: translateY(40%);
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-  margin-top: 20px;
-  padding: 25px 45px;
-  text-transform: uppercase;
-  transition: all 200ms;
-  font-family: "Metropolis"; }
-  .modal-form-button:hover, .modal-form-button:focus {
-    background-color: #a70627;
-    outline: 0; }
+    transition: all 200ms;
+    font-family: "Metropolis"; }
+    @media screen and (max-width: 550px) {
+      .modal-form-button {
+        padding: 10px 15px;
+        font-size: 19px; } }
+    .modal-form-button:hover, .modal-form-button:focus {
+      background-color: #a70627;
+      outline: 0; }
 
 .in {
   opacity: 1; }
 
+.modal-backdrop {
+  transition: 200ms all linear; }
+
 .modal-backdrop.fade {
   opacity: .75; }
+
+@media screen and (max-width: 1250px) and (min-width: 992px) {
+  .svg-container {
+    transform: scale(1.3); } }
+@media screen and (max-width: 480px) {
+  .svg-container {
+    transform: scale(1.3); } }
 
 /*
 breakpoints

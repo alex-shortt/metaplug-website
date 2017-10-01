@@ -90,5 +90,5 @@ function updateTime(circleOptions) {
 }
 
 function initModal() {
-    $('#signup-modal').modal();
+    $('#signup-modal').modal('hide');
 }

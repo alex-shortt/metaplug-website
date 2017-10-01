@@ -19,10 +19,10 @@
         <div class="modal-container">
             <h1 class="modal-close" data-toggle="modal" data-target="#signup-modal">X</h1>
             <div class="row modal-row">
-                <form>
+                <form class="modal-form">
                     <label class="modal-form-label">
-                    <input class="modal-form-input" type="text" required />
-                    <div class="modal-form-label-text">NAME/ORGANIZATION</div>
+                        <input class="modal-form-input" type="text" required />
+                        <div class="modal-form-label-text">NAME/ORGANIZATION</div>
                     </label>
                     <label class="modal-form-label">
                         <input class="modal-form-input" type="text" required />
@@ -31,11 +31,11 @@
                     <div class="modal-form-radio-title">ACCOUNT TYPE</div>
                     <div class="modal-form-radio">
                         <label class="modal-form-label modal-form-radio-label">
-                            <input class="modal-form-radio-input" name="type" type="radio" required />
+                            <input class="modal-form-radio-input" name="type" value="business" type="radio" required />
                             <div class="modal-form-radio-text">BUSINESS</div>
                         </label>
                         <label class="modal-form-label modal-form-radio-label">
-                            <input class="modal-form-radio-input" name="type" type="radio" required />
+                            <input class="modal-form-radio-input" name="type" value="creative" type="radio" required />
                             <div class="modal-form-radio-text">CREATIVE</div>
                         </label>
                     </div>
@@ -56,10 +56,10 @@
             <h2 class="coming-text">COMING SOON</h2>
         </div>
         <div class="row circle-row">
-            <div id="circle-days" class="col-lg-3 col-6 circle"></div>
-            <div id="circle-hours" class="col-lg-3 col-6 circle"></div>
-            <div id="circle-mins" class="col-lg-3 col-6 circle"></div>
-            <div id="circle-secs" class="col-lg-3 col-6 circle"></div>
+            <div id="circle-days" class="col-6 col-lg-3 circle"></div>
+            <div id="circle-hours" class="col-6 col-lg-3 circle"></div>
+            <div id="circle-mins" class="col-6 col-lg-3 circle"></div>
+            <div id="circle-secs" class="col-6 col-lg-3 circle"></div>
         </div>
         <div class="row signup-row">
             <div class="col-lg-4 signup"></div>
